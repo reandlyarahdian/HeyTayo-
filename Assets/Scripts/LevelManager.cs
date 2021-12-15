@@ -19,9 +19,12 @@ public class LevelManager : MonoBehaviour
         pool = GetComponent<ObjPool>();
     }
 
-    public void SpawnObj(string tag)
+    public void SpawnObj(string tagNnum)
     {
-        for(int i = 0; i < numberObs; i++)
+        string[] split = tagNnum.Split(","[0]);
+        string tag = split[0];
+        int num = int.Parse(split[1]);
+        for(int i = 0; i < num; i++)
         {
             GameObject game = pool.ObjSpawn(tag, new Vector3(Random.Range(xMin, xMax), yPos[Random.Range(0, yPos.Length + 1)], 0), transform.rotation);
             objUsed.Add(game);
