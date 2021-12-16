@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField]
-    private PlayerController controller;
+    public PlayerController controller;
     [SerializeField]
     private Text text;
     void Start()
@@ -14,7 +13,6 @@ public class UIManager : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         text.text = Mathf.Ceil(controller.speed).ToString();

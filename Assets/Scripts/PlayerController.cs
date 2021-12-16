@@ -7,14 +7,10 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     public float speed;
     [SerializeField]
-    private float moveSpeed;
+    private float step;
     [SerializeField]
     private float[] yPos;
-    [SerializeField]
-    private int test; 
-    [SerializeField]
-    private float smoothTime;
-    private Vector3 velocity;
+    private int test;
 
     private void Start()
     {
@@ -59,11 +55,11 @@ public class PlayerController : MonoBehaviour
 
     void MoveToTrack(int points)
     {
-        transform.position = Vector3.MoveTowards(transform.position, ChangeTrack(points), moveSpeed);
+        transform.position = Vector3.MoveTowards(transform.position, ChangeTrack(points), step);
     }
 
     void ObjMove(float xSpeed)
     {
-        transform.Translate(Vector3.right * xSpeed * Time.deltaTime);
+        rb.MovePosition(transform.position + (Vector3.right * speed * Time.deltaTime));
     }
 }

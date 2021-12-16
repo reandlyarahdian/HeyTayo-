@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class ObjPool : MonoBehaviour
 {
-    [SerializeField]
-    private PoolData[] obstacleObject;
+    public PoolData[] obstacleObject;
     private List<GameObject> avail = new List<GameObject>();
 
     private void Awake()
@@ -53,10 +52,10 @@ public class ObjPool : MonoBehaviour
                 if (game.CompareTag(tag))
                 {
                     obj = game;
+                    avail.Remove(obj);
                     break;
                 }
             }
-            avail.Remove(obj);
         }
         return obj;
     }

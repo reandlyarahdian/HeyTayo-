@@ -6,13 +6,10 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField]
     private float[] yPos;
-    [SerializeField]
-    private int xMax, xMin;
+    private int xMax = 500, xMin = 20;
     private ObjPool pool;
-    [SerializeField]
-    private int numberObs;
-    [SerializeField]
     List<GameObject> objUsed = new List<GameObject>();
+    public PlayerController player;
 
     private void Start()
     {
@@ -26,7 +23,8 @@ public class LevelManager : MonoBehaviour
         int num = int.Parse(split[1]);
         for(int i = 0; i < num; i++)
         {
-            GameObject game = pool.ObjSpawn(tag, new Vector3(Random.Range(xMin, xMax), yPos[Random.Range(0, yPos.Length + 1)], 0), transform.rotation);
+            GameObject game = pool.ObjSpawn(tag, new Vector3(Random.Range(xMin, xMax), yPos[Random.Range(0, yPos.Length)], 0), transform.rotation);
+            if (game.GetComponent<ObjChecker>()) { game.GetComponent<ObjChecker>().player = player; game.GetComponent<ObjChecker>().pool = pool; }
             objUsed.Add(game);
         }
     }

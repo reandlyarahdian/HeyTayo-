@@ -5,15 +5,8 @@ using UnityEngine.Events;
 
 public class ObjChecker : MonoBehaviour
 {
-    private PlayerController player;
-    private ObjPool pool;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        player = FindObjectOfType<PlayerController>();
-        pool = FindObjectOfType<ObjPool>();
-    }
+    public PlayerController player;
+    public ObjPool pool;
 
     // Update is called once per frame
     void Update()
