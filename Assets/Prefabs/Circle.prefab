@@ -246,7 +246,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3754398047649100748}
   - {fileID: 3094484585807145956}
   - {fileID: 1626030271367001894}
   m_Father: {fileID: 0}
@@ -296,7 +295,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3033684434242637105}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &234503678903600436
 BoxCollider2D:
@@ -377,12 +376,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5434024116748767336}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3033684434242637105}
-  m_RootOrder: 0
+  m_Father: {fileID: 3094484585807145956}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &8116873776946337757
 ParticleSystem:
@@ -5192,8 +5191,9 @@ Transform:
   - {fileID: 817601277162030210}
   - {fileID: 8046133368821860260}
   - {fileID: 6642158673938802322}
+  - {fileID: 3754398047649100748}
   m_Father: {fileID: 3033684434242637105}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3483406800052416595
 SpriteRenderer:

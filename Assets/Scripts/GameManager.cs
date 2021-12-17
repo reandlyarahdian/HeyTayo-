@@ -48,6 +48,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void CrashSound()
+    {
+        AudioManager.Instance.PlaySound("Collision");
+    }
+
     void Leveling()
     {
         switch (level)

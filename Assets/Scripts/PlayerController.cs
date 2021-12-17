@@ -21,16 +21,14 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.X))
         {
-            speed += 0.05f;
+            speed += 0.1f;
             speed = speed > 75 ? 75 : speed;
-            AudioManager.Instance.PlaySound("Gas");
         }
 
         if (Input.GetKey(KeyCode.Z))
         {
-            speed -= 0.1f;
+            speed -= 0.5f;
             speed = speed < 0 ? 0 : speed;
-            AudioManager.Instance.PlaySound("Stretch");
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
