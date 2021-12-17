@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: RoadWorker
   m_EditorClassIdentifier: 
   prefabs: {fileID: 4274028258256507236, guid: 44aac1391485c1248a55ac2791879847, type: 3}
-  PoolSum: 5
+  PoolSum: 10

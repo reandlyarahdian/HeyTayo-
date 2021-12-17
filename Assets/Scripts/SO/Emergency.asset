@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Emergency
   m_EditorClassIdentifier: 
   prefabs: {fileID: 1070146436195732859, guid: 9bf9580fd3d625b44b5d6a2c4c20d69a, type: 3}
-  PoolSum: 5
+  PoolSum: 10

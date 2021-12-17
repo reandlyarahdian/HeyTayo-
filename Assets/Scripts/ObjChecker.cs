@@ -11,7 +11,7 @@ public class ObjChecker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if((transform.position.x - player.transform.position.x) < -7f)
+        if((transform.position.x - player.transform.position.x) < -10f)
         {
             pool.ObjReturn(this.gameObject);
             gameObject.SetActive(false);

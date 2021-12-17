@@ -18,9 +18,9 @@ public class StopSign : MonoBehaviour
     {
         while (true)
         {
-            for(int i = 0; i < TrafficLight.Length; i++)
+            foreach(UnityEvent traffic in TrafficLight)
             {
-                TrafficLight[i].Invoke();
+                traffic.Invoke();
                 yield return new WaitForSeconds(timer);
             }
         }

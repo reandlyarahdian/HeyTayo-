@@ -5,6 +5,7 @@ using UnityEngine;
 public class CarScript : MonoBehaviour
 {
     public PlayerController player;
+    [SerializeField]
     private float speed = 15f;
     public ObjPool pool;
     private Rigidbody2D rb;

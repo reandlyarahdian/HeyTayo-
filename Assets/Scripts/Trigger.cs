@@ -14,7 +14,13 @@ public class Trigger : MonoBehaviour
     {
         if (collision.CompareTag(ObjectTag))
         {
-            @event.Invoke();
+            StartCoroutine(waitToActive());
         }
+    }
+
+    IEnumerator waitToActive()
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
+        @event.Invoke();
     }
 }
